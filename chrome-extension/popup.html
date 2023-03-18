@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="popup.css">
+    <title>Summarize Options</title>
+    <style>
+      body {
+        width: 300px;
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ChatGPT Summarize</h1>
+    <label for="delayTime">Delay after page load (ms):</label>
+    <input type="number" id="delayTime" min="0">
+    <br><br>
+    <label for="language">Language:</label>
+    <input type="text" id="language">
+    <br><br>
+    <label for="model">Model:</label>
+    <select id="model">
+      <option value="default">Default (GPT 3.5)</option>
+      <option value="text-davinci-002-render-paid">Legacy (GPT 3.5)</option>
+      <option value="gpt-4">GPT-4 (Only for ChatGPT Plus)</option>
+    </select>
+    <br><br>
+    <label for="wordLimit">Word limit:</label>
+    <input type="number" id="wordLimit" min="1000">
+    <br><br>
+    <button id="save">Save</button>
+    <script src="popup.js"></script>
+  </body>
+</html>

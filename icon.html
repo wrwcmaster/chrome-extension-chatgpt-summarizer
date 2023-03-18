@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ChatGPT Icon</title>
+  </head>
+  <body>
+    <canvas id="icon" width="128" height="128"></canvas>
+    <script>
+      const canvas = document.getElementById('icon');
+      const ctx = canvas.getContext('2d');
+
+      // Draw gradient background
+      const gradient = ctx.createLinearGradient(0, 0, 128, 0);
+      gradient.addColorStop(0, '#3da5f4');
+      gradient.addColorStop(1, '#182952');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, 128, 128);
+
+      // Draw speech bubbles
+      ctx.fillStyle = 'white';
+      ctx.strokeStyle = '#3da5f4';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.arc(64, 58, 40, 1 * Math.PI, 0, true);
+      ctx.lineTo(84, 58);
+      ctx.lineTo(64, 74);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = '#3da5f4';
+      ctx.strokeStyle = 'white';
+      ctx.beginPath();
+      ctx.arc(64, 70, 40, 0, 1 * Math.PI, false);
+      ctx.lineTo(44, 70);
+      ctx.lineTo(64, 54);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      // Draw text
+      ctx.font = 'bold 24px Arial';
+      ctx.fillStyle = 'white'; // Updated text color
+      ctx.fillText('GPT', 54, 50);
+
+      ctx.font = 'bold 18px Arial';
+      ctx.fillStyle = 'white';
+      ctx.fillText('...', 58, 90);
+    </script>
+  </body>
+</html>

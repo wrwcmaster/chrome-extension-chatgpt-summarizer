@@ -86,14 +86,16 @@ ${articleParts[currentIndex]}
 
   // Main
   chrome.storage.sync.get("config", ({ config }) => {
-    if (config.delayTime !== undefined) {
-      delayTime = config.delayTime;
-    }
-    if (config.language !== undefined) {
-      language = config.language;
-    }
-    if (config.wordLimit !== undefined) {
-      wordLimit = config.wordLimit;
+    if (config) {
+      if (config.delayTime !== undefined) {
+        delayTime = config.delayTime;
+      }
+      if (config.language !== undefined) {
+        language = config.language;
+      }
+      if (config.wordLimit !== undefined) {
+        wordLimit = config.wordLimit;
+      }
     }
     setTimeout(() => {
       startSummarizeOperation();

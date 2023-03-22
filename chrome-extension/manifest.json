@@ -17,8 +17,7 @@
     "scripting",
     "webNavigation",
     "contextMenus",
-    "storage",
-    "tabs"
+    "storage"
   ],
   "host_permissions": [
     "https://chat.openai.com/"

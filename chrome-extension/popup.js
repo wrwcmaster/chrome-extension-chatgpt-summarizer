@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   chrome.storage.sync.get("config", ({ config }) => {
     if (config === undefined) config = {};
     if (config.delayTime === undefined) {
-      config.delayTime = 1000;
+      config.delayTime = 1500;
     }
     delayTimeInput.value = config.delayTime;
 

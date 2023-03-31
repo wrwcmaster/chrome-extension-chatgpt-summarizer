@@ -1,5 +1,4 @@
 (function () {
-  const btnSend = document.querySelector("form button");
   let language = "English";
   let delayTime = 1000;
   let wordLimit = 1500;
@@ -55,14 +54,14 @@ ${articleParts[currentIndex]}
   }
 
   function sendChatMessage(message) {
-    document.querySelector("textarea").value = message;
+    const textArea = document.querySelector("textarea");
+    textArea.value = message;
 
-    const clickEvent = new MouseEvent('click', {
-      view: window,
-      bubbles: true,
-      cancelable: true
+    const enterEvent = new KeyboardEvent('keydown', {
+      keyCode: 13,  // Enter key code
+      key: 'Enter', // Enter key
     });
-    btnSend.dispatchEvent(clickEvent);
+    textArea.dispatchEvent(enterEvent);
   }
 
   function handleAIMessage(message) {

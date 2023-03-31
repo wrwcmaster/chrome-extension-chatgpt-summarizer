@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Summarizer Promo Tile</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="promoTile" width="440" height="280"></canvas>
+    <script>
+        const canvas = document.getElementById('promoTile');
+        const ctx = canvas.getContext('2d');
+
+        // Background
+        const gradient = ctx.createLinearGradient(0, 0, 440, 280);
+        gradient.addColorStop(0, '#3da5f4');
+        gradient.addColorStop(1, '#182952');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 440, 280);
+
+        // Title
+        ctx.fillStyle = '#ffffff';
+        ctx.font = '24px Arial';
+        ctx.fillText('ChatGPT Summarizer', 20, 50);
+
+        // Subtitle
+        ctx.fillStyle = '#ffffff';
+        ctx.font = '18px Arial';
+        ctx.fillText('Translate & Simplify Text Instantly!', 20, 80);
+
+        // Draw speech bubbles
+        ctx.fillStyle = 'white';
+        ctx.strokeStyle = '#3da5f4';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.arc(60, 160, 40, 1 * Math.PI, 0, true);
+        ctx.lineTo(80, 160);
+        ctx.lineTo(60, 176);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = '#3da5f4';
+        ctx.strokeStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(60, 172, 40, 0, 1 * Math.PI, false);
+        ctx.lineTo(40, 172);
+        ctx.lineTo(60, 156);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        // Draw text
+        ctx.font = 'bold 20px Arial';
+        ctx.fillStyle = 'white';
+        ctx.fillText('GPT', 48, 158);
+
+        ctx.font = 'bold 16px Arial';
+        ctx.fillStyle = 'white';
+        ctx.fillText('...', 54, 198);
+
+        // Call-to-action button
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(240, 120, 180, 60);
+        ctx.fillStyle = '#3da5f4';
+        ctx.font = '20px Arial';
+        ctx.fillText('Add to Chrome', 260, 160);
+    </script>
+</body>
+</html>
